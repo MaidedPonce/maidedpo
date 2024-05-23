@@ -3,7 +3,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 interface Props {
-    gridProps: {
+  gridProps: {
     color: string
     className?: string
     stroke: string
@@ -44,7 +44,7 @@ const Animation = ({ gridProps, showStroke }: Props) => {
       transition: {
         duration: 0.3,
       },
-      color: 'black'
+      color: 'black',
     },
   }
 
@@ -54,7 +54,10 @@ const Animation = ({ gridProps, showStroke }: Props) => {
       animate={showStroke ? 'animate' : 'default'}
       className='relative h-full cursor-pointer'
     >
-      <motion.p variants={textVariants} className={`absolute select-none ${textStyle}`}>
+      <motion.p
+        variants={textVariants}
+        className={`absolute select-none ${textStyle}`}
+      >
         {text}
       </motion.p>
       <motion.svg className='h-full w-full' xmlns='http://www.w3.org/2000/svg'>

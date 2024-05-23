@@ -75,7 +75,10 @@ const GRIDS: colorProps = {
 }
 
 const Grid = () => {
-  const [showCard, showInfo] = useState(false)
+  const [showCard, showInfo] = useState({
+    key: '',
+    isOpen: false,
+  })
   const grids = Object.values({ ...GRIDS })
   const keys = Object.keys({ ...GRIDS })
   const draw = {
@@ -98,7 +101,7 @@ const Grid = () => {
           delay: 0.2,
           ease: 'easeInOut',
         },
-        opacity: 0.5,
+        opacity: 0,
       }
       if (down.includes(i)) {
         return {
@@ -114,34 +117,162 @@ const Grid = () => {
     },
   }
   console.log(showCard)
+
+  const showCardInfo = () => {
+    switch (showCard.key) {
+      case 'red':
+        return (
+          <>
+            <motion.p
+              className='leading-8'
+              initial={{
+                x: -200,
+                opacity: 0,
+              }}
+              animate={
+                showCard.isOpen
+                  ? {
+                      x: 0,
+                      transition: {
+                        duration: 0.5,
+                        delay: 0.5,
+                        ease: 'easeInOut',
+                      },
+                      opacity: 1,
+                    }
+                  : {
+                      x: -200,
+                      opacity: 0,
+                      transition: {
+                        duration: 0.5,
+                        ease: 'easeInOut',
+                      },
+                    }
+              }
+              exit={{
+                x: -200,
+              }}
+            >
+              Hey! Mi nombre es <span className='font-bold'>Maided Ponce</span>,
+              soy de la CDMX y llevo desde junio de 2020 practicando y
+              estudiando desarrollo web con{' '}
+              <span className='font-bold'>JavaScript</span> de forma
+              autodidacta.
+              <br /> He colaborado profesionalmente con el entorno{' '}
+              <span className='font-bold'>Next js</span> desde 2021.
+            </motion.p>
+            <motion.p
+              className='text-2xl w-fit font-bold'
+              initial={{
+                x: 200,
+                opacity: 0,
+                y: 100,
+              }}
+              animate={
+                showCard.isOpen
+                  ? {
+                      x: 'calc(100% - 45%)',
+                      transition: {
+                        duration: 0.5,
+                        delay: 0.5,
+                        ease: 'easeInOut',
+                      },
+                      opacity: 1,
+                    }
+                  : {
+                      x: 200,
+                      y: 100,
+                      opacity: 0,
+                      transition: {
+                        duration: 0.5,
+                        ease: 'easeInOut',
+                      },
+                    }
+              }
+              exit={{
+                x: -200,
+              }}
+            >
+              Frontend Developer
+            </motion.p>
+          </>
+        )
+      default:
+        return (
+          <motion.p
+            className='leading-8'
+            initial={{
+              x: -200,
+              opacity: 0,
+            }}
+            animate={
+              showCard.isOpen
+                ? {
+                    x: 0,
+                    transition: {
+                      duration: 0.5,
+                      delay: 0.5,
+                      ease: 'easeInOut',
+                    },
+                    opacity: 1,
+                  }
+                : {
+                    x: -200,
+                    opacity: 0,
+                    transition: {
+                      duration: 0.5,
+                      ease: 'easeInOut',
+                    },
+                  }
+            }
+            exit={{
+              x: -200,
+            }}
+          >
+            Hey! Mi nombre es <span className='font-bold'>Maided Ponce</span>,
+            soy de la CDMX y llevo desde junio de 2020 practicando y estudiando
+            desarrollo web con <span className='font-bold'>JavaScript</span> de
+            forma autodidacta.
+            <br /> He colaborado profesionalmente con el entorno{' '}
+            <span className='font-bold'>Next js</span> desde 2021.
+          </motion.p>
+        )
+    }
+  }
   return (
-    <>
-      <div className='h-full'>info</div>
-      <div className='grid grid-cols-3 gap-2 grid-rows-3 h-auto w-auto'>
+    <div className='h-[352px] w-[352px] relative'>
+      <div
+        className={`absolute ${showCard.isOpen ? 'z-0' : 'z-10'} grid grid-cols-3 gap-2 grid-rows-3 h-auto w-auto`}
+      >
         {grids.map((grid, index) => {
           return (
             <motion.div
-            variants={draw}
-            animate={showCard ? 'move' : 'show'}
+              variants={draw}
+              animate={showCard.isOpen ? 'move' : 'show'}
               onClick={() => {
-                showInfo(!showCard)
+                showInfo({ key: keys[index], isOpen: !showCard.isOpen })
               }}
               className={grid.className}
               style={
-                showCard
+                showCard.isOpen
                   ? { background: 'transparent' }
                   : { background: grid.bg }
               }
               custom={keys[index]}
               key={index}
             >
-              <Animation gridProps={{ ...grid }} showStroke={showCard} />
+              <Animation gridProps={{ ...grid }} showStroke={showCard.isOpen} />
             </motion.div>
           )
         })}
       </div>
-      <div className='h-full'>info 2</div>
-    </>
+
+      <div
+        className={`${showCard.isOpen ? 'z-10' : 'z-0'} absolute h-full w-full`}
+      >
+        {showCardInfo()}
+      </div>
+    </div>
   )
 }
 
