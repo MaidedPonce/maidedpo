@@ -1,9 +1,9 @@
-import { Grid, Scroll } from 'app/components'
+import { HomeLayout } from 'app/ui'
 
 export default function Home() {
   return (
     <main className='min-h-screen relative'>
-      <Scroll />
+      <HomeLayout />
     </main>
   )
 }
