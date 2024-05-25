@@ -17,7 +17,13 @@ const config: Config = {
           blue:  '#1e40af',
           yellow: '#ca8a04',
           purple: '#6b21a8',
-          gray: '#4b5563'
+          gray: '#4b5563',
+          cd: '#2dd4bf',
+          int: '#3b0764',
+          wby: '#db2777',
+          uni: '#9d2342',
+          plat: '#0ae98a',
+          linkedin: '#0a63bc',
         }
       }
     },

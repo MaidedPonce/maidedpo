@@ -1,7 +1,8 @@
 'use client'
-import { useTransform, motion, useScroll } from 'framer-motion'
+import { useTransform, m, useScroll } from 'framer-motion'
 import Image from 'next/image'
 import React, { useRef } from 'react'
+import { LazyAnimations } from 'components/LazyAnimations'
 
 const Stack = () => {
   const ref = useRef<HTMLDivElement>(null)
@@ -14,52 +15,61 @@ const Stack = () => {
 
   return (
     <div ref={ref} className='h-screen bg-white flex overflow-hidden'>
-      <motion.div style={{ y: y2 }} className='w-full h-fit'>
-        <ul className='grid grid-cols-3 grid-rows-2'>
-          <li className='m-auto'>
-            <Image
-              alt='JavaScript'
-              height={70}
-              width={70}
-              src='/icons/javascript-svgrepo-com.svg'
-            />
-          </li>
-          <li className='m-auto'>
-            <Image
-              alt='JavaScript'
-              height={70}
-              width={70}
-              src='/icons/react-svgrepo-com.svg'
-            />
-          </li>
-          <li className='m-auto'>
-            <Image
-              alt='JavaScript'
-              height={70}
-              width={70}
-              src='/icons/nextjs-svgrepo-com.svg'
-            />
-          </li>
-          <li className='m-auto'>
-            <Image
-              alt='JavaScript'
-              height={70}
-              width={70}
-              src='/icons/tailwind-svgrepo-com.svg'
-            />
-          </li>
-          <li className='m-auto'>
-            <Image
-              alt='JavaScript'
-              height={70}
-              width={70}
-              src='/icons/redux-svgrepo-com.svg'
-            />
-          </li>
-          <li className='m-auto font-bold text-4xl text-blue-500'>Zustand</li>
-        </ul>
-      </motion.div>
-      <motion.div style={{ y }} className='w-full bg-blue-800' />
+      <LazyAnimations>
+        <m.div style={{ y: y2 }} className='w-1/2 h-full px-8'>
+          <ul className='grid grid-cols-3 grid-rows-2 w-fit'>
+            <li className='w-20 h-20'>
+              <Image
+                alt='JavaScript'
+                height={70}
+                width={70}
+                src='/icons/javascript-svgrepo-com.svg'
+              />
+            </li>
+            <li className='w-20 h-20'>
+              <Image
+                alt='JavaScript'
+                height={70}
+                width={70}
+                src='/icons/react-svgrepo-com.svg'
+              />
+            </li>
+            <li className='w-20 h-20'>
+              <Image
+                alt='JavaScript'
+                height={70}
+                width={70}
+                src='/icons/nextjs-svgrepo-com.svg'
+              />
+            </li>
+            <li className='w-20 h-20'>
+              <Image
+                alt='JavaScript'
+                height={70}
+                width={70}
+                src='/icons/tailwind-svgrepo-com.svg'
+              />
+            </li>
+            <li className='w-20 h-20'>
+              <Image
+                alt='JavaScript'
+                height={70}
+                width={70}
+                src='/icons/redux-svgrepo-com.svg'
+              />
+            </li>
+            <li className='m-auto font-bold text-4xl text-blue-500'>Zustand</li>
+          </ul>
+        </m.div>
+      </LazyAnimations>
+      <LazyAnimations>
+        <m.div
+          style={{ y }}
+          className='w-1/2 px-8 flex justify-center items-center bg-blue-800'
+        >
+          <p className='text-white text-5xl font-bold'>Stack</p>
+        </m.div>
+      </LazyAnimations>
     </div>
   )
 }

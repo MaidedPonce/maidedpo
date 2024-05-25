@@ -1,6 +1,8 @@
 'use client'
-import { useTransform, motion, useScroll } from 'framer-motion'
+import { useTransform, m, useScroll } from 'framer-motion'
 import React, { useRef } from 'react'
+import { LazyAnimations } from 'components/LazyAnimations'
+import { Path } from '../components/Path'
 
 const Education = () => {
   const ref = useRef(null)
@@ -13,14 +15,36 @@ const Education = () => {
 
   return (
     <div ref={ref} className='h-screen bg-white flex overflow-hidden'>
-      <motion.div style={{ y: y2 }} className='w-full h-fit'>
-        <ul className='grid grid-cols-3 grid-rows-2'>
-          <li className='m-auto'>
-                Holi
-          </li>
-        </ul>
-      </motion.div>
-      <motion.div style={{ y }} className='w-full bg-purple-800' />
+      <LazyAnimations>
+        <m.div style={{ y: y2 }} className='w-1/2 h-fit px-8'>
+          <ol className='flex flex-col gap-6 p-4 list-disc'>
+            <li className='marker:text-brand-uni'>
+              <Path
+                text={
+                  <div className='flex gap-4 flex-col'>
+                    <a className='font-bold' href='https://rcastellanos.cdmx.gob.mx/'>Universidad Rosario Castellanos</a>
+                    <span>Tecnolgías de la información y la Comunicación</span>
+                  </div>
+                }
+                stroke='var(--uni)'
+              />
+            </li>
+            <li className='marker:text-brand-plat'>
+              <Path text={
+                <a href='https://platzi.com/p/maidedhp/'>Platzi</a>
+              } stroke='var(--plat)' />
+            </li>
+          </ol>
+        </m.div>
+      </LazyAnimations>
+      <LazyAnimations>
+        <m.div
+          style={{ y }}
+          className=' bg-purple-800 w-1/2 flex justify-center items-center'
+        >
+          <p className='text-white font-bold text-5xl'>Educación</p>
+        </m.div>
+      </LazyAnimations>
     </div>
   )
 }
