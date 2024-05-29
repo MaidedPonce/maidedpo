@@ -29,7 +29,7 @@ export function AboutMe() {
         )}
       </div>
       <motion.div
-        className='text-white px-8 w-full text-base flex items-center justify-center lg:text-xl sticky top-40 text-center h-[30vh] bg-transparent'
+        className='text-white pb-8 px-8 w-full text-base flex items-center justify-center lg:text-xl sticky top-40 text-center h-[30vh] bg-transparent'
         style={{
           opacity: nameOpacity,
         }}

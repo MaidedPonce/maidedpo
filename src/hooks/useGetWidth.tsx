@@ -1,6 +1,10 @@
 import { useEffect, useLayoutEffect, useState } from 'react'
 
-const useGetWidth = ({ ref }: any) => {
+interface GetWithProps {
+  ref?: any
+}
+
+const useGetWidth = ({ ref }: GetWithProps) => {
   const [elementWidth, setElementWidth] = useState<number>(0)
   const [elementHeight, setElementHeight] = useState<number>(0)
 
@@ -8,6 +12,9 @@ const useGetWidth = ({ ref }: any) => {
     if (ref?.current) {
       setElementWidth(ref.current?.offsetWidth)
       setElementHeight(ref?.current?.offsetHeight)
+    } else {
+      const element = document.querySelector('body')
+      element && setElementWidth(element?.offsetWidth)
     }
   }
 

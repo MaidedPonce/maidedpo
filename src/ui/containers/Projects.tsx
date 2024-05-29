@@ -4,22 +4,28 @@ import React, { useRef } from 'react'
 import { LazyAnimations } from 'components/LazyAnimations'
 import { Path } from '../components/Path'
 import Image from 'next/image'
+import { useGetWidth } from 'app/hooks'
 
 const Projects = () => {
   const ref = useRef(null)
+  const { elementWidth } = useGetWidth({})
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start center', 'end end'],
   })
+  const viewport = elementWidth <= 768 ? -100 : -900
   const y = useTransform(scrollYProgress, [0, 1], [500, 0])
-  const y2 = useTransform(scrollYProgress, [0, 1], [-900, 0])
+  const y2 = useTransform(scrollYProgress, [0, 1], [viewport || -900, 0])
 
   return (
-    <div ref={ref} className='h-screen bg-white flex overflow-hidden'>
+    <div
+      ref={ref}
+      className='min-h-screen h-[130vh] md:h-screen md:flex-row bg-white flex-col flex overflow-hidden'
+    >
       <LazyAnimations>
         <m.div
           style={{ y: y2 }}
-          className='w-full bg-yellow-600 flex justify-center items-center'
+          className='w-full md:w-1/2 bg-yellow-600 h-full flex justify-center items-center'
         >
           <p className='text-white font-bold text-5xl'>Experiencia</p>
         </m.div>
@@ -28,10 +34,12 @@ const Projects = () => {
       <LazyAnimations>
         <m.div
           style={{ y: y }}
-          className='w-full h-full flex justify-around items-center flex-col'
+          className='w-full md:w-1/2 p-8 h-full flex justify-around items-center flex-col'
         >
           <div>
-            <h1 className='text-2xl font-semibold pb-4'>He colaborado en...</h1>
+            <h1 className=' text-xl md:text-2xl font-semibold pb-4'>
+              He colaborado en...
+            </h1>
             <ol className='flex flex-col gap-4 list-disc pl-4'>
               <li className='marker:text-brand-cd'>
                 <Path text='CuraDeuda' stroke='var(--cd)' />
@@ -54,17 +62,17 @@ const Projects = () => {
             </ul> */}
           </div>
           <div>
-            <h1 className='text-2xl font-semibold pb-4'>
+            <h1 className='text-xl md:text-2xl font-semibold pb-4'>
               Mis proyectos personales...
             </h1>
             <ul className='grid grid-cols-2 grid-rows-2 gap-3 w-fit m-auto'>
-              <li className='row-start-1 col-star-1 row-span-1 h-36 w-36'>
+              <li className='row-start-1 col-star-1 row-span-1 h-28 md:h-36 w-28 md:w-36'>
                 {/* <div className='absolute w-full h-full bg-black/20 z-10' /> */}
                 <a
                   href='https://maidedponce.github.io/todoMachine/'
                   className='relative h-full flex items-center justify-center bg-black overflow-hidden '
                 >
-                  <h2 className='absolute text-white z-10 font-bold'>
+                  <h2 className='absolute text-white z-10 font-bold text-xs'>
                     TODOMACHINE
                   </h2>
                   <Image
@@ -75,12 +83,12 @@ const Projects = () => {
                   />
                 </a>
               </li>
-              <li className='row-start-2 col-start-1 w-36 h-36'>
+              <li className='row-start-2 col-start-1 w-28 md:w-36 h-28 md:h-36'>
                 <a
                   href='https://yeahofcourse.com/'
                   className='h-full flex justify-center items-center relative  bg-black overflow-hidden'
                 >
-                  <h2 className='absolute text-white z-10 font-bold'>
+                  <h2 className='absolute text-white z-10 font-bold text-xs'>
                     Yes Of Course
                   </h2>
                   <Image
@@ -96,7 +104,7 @@ const Projects = () => {
                   href='https://maidedponce.github.io/rick-and-morty/'
                   className='flex h-full justify-center items-center relative bg-black overflow-hidden'
                 >
-                  <h2 className='absolute text-white z-10 font-bold'>
+                  <h2 className='absolute text-white z-10 font-bold text-xs'>
                     Rick and Morty
                   </h2>
                   <Image
