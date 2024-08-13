@@ -6,7 +6,7 @@ import { NamesMobile } from '../components/NamesMobile' */
 import Image from 'next/image'
 import { LazyAnimations } from 'components/LazyAnimations'
 
-export function ContactMe() {
+export function Main() {
   const ref = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -15,9 +15,24 @@ export function ContactMe() {
   const y = useTransform(scrollYProgress, [0, 1], [-200, 600])
   // const nameOpacity = useTransform(scrollYProgress, [0, 1], [0, 1])
   return (
-    <section
+    <div
       ref={ref}
-      className='bg-email flex justify-center h-[170vh] bg-cover bg-center'
-    ></section>
+      className='bg-fairy-img flex justify-center h-[170vh] bg-cover bg-center'
+    >
+      <LazyAnimations>
+        <m.div
+          style={{ y }}
+          className='h-full'
+        >
+          <figure className='h-[25vw] w-[25vw] relative'>
+            <Image
+              fill
+              alt='fairy'
+              src='/images/fairy.PNG'
+            />
+          </figure>
+        </m.div>
+      </LazyAnimations>
+    </div>
   )
 }

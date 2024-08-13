@@ -4,6 +4,7 @@ import React, { useRef } from 'react'
 import { LazyAnimations } from 'components/LazyAnimations'
 import { Path } from '../components/Path'
 import { useGetWidth } from 'app/hooks'
+import Image from 'next/image'
 
 const Education = () => {
   const ref = useRef(null)
@@ -18,6 +19,21 @@ const Education = () => {
 
   return (
     <div ref={ref} className='h-screen bg-white flex-col md:flex-row flex overflow-hidden'>
+      
+      <section className='w-1/2 items-center bg-cover bg-center flex justify-center bg-reading h-full'>
+        <LazyAnimations>
+          <m.div className='h-fit w-full'>
+            <figure className='h-40 w-full relative'>
+              <Image
+                fill
+                alt='fairy'
+                src='/images/butterflies.PNG'
+              />
+            </figure>
+          </m.div>
+        </LazyAnimations>
+      </section>
+
       <LazyAnimations>
         <m.div style={{ y: y2 }} className='w-full pt-8 md:w-1/2 h-full md:h-fit px-8'>
           <ol className='flex flex-col gap-6 p-4 list-disc'>
@@ -38,14 +54,6 @@ const Education = () => {
               } stroke='var(--plat)' />
             </li>
           </ol>
-        </m.div>
-      </LazyAnimations>
-      <LazyAnimations>
-        <m.div
-          style={{ y }}
-          className=' bg-purple-800 w-full h-full md:w-1/2 flex justify-center items-center'
-        >
-          <p className='text-white font-bold text-5xl'>Educación</p>
         </m.div>
       </LazyAnimations>
     </div>

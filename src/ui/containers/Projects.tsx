@@ -23,32 +23,29 @@ const Projects = () => {
       className='min-h-screen h-[130vh] md:h-screen md:flex-row bg-white flex-col flex overflow-hidden'
     >
       <LazyAnimations>
-        <m.div
-          style={{ y: y2 }}
-          className='w-full md:w-1/2 bg-yellow-600 h-full flex justify-center items-center'
-        >
-          <p className='text-white font-bold text-5xl'>Experiencia</p>
-        </m.div>
-      </LazyAnimations>
-
-      <LazyAnimations>
-        <m.div
-          style={{ y: y }}
-          className='w-full md:w-1/2 p-8 h-full flex justify-around items-center flex-col'
-        >
+        <m.div className='w-full md:w-1/2 p-8 h-full flex justify-around items-center flex-col'>
           <div>
             <h1 className=' text-xl md:text-2xl font-semibold pb-4'>
               He colaborado en...
             </h1>
             <ol className='flex flex-col gap-4 list-disc pl-4'>
               <li className='marker:text-brand-cd'>
-                <Path text='CuraDeuda' stroke='var(--cd)' />
+                <Path
+                  text='CuraDeuda'
+                  stroke='var(--cd)'
+                />
               </li>
               <li className='marker:text-brand-int'>
-                <Path text='INTRARE' stroke='var(--int)' />
+                <Path
+                  text='INTRARE'
+                  stroke='var(--int)'
+                />
               </li>
               <li className='marker:text-brand-wby'>
-                <Path text='WeBookYou' stroke='var(--wby)' />
+                <Path
+                  text='WeBookYou'
+                  stroke='var(--wby)'
+                />
               </li>
             </ol>
             {/* <ul className='grid grid-cols-2 grid-rows-2 gap-3 w-fit'>
@@ -119,6 +116,7 @@ const Projects = () => {
           </div>
         </m.div>
       </LazyAnimations>
+      <section className='w-1/2 items-center bg-cover bg-center flex justify-center bg-sorceress h-full'></section>
     </div>
   )
 }
