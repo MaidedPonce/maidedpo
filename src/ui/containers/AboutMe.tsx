@@ -11,23 +11,48 @@ const AboutMe = () => {
     target: ref,
     offset: ['start center', 'end end'],
   })
-  /* const y = useTransform(scrollYProgress, [0, 1], [-500, 0])
-  const y2 = useTransform(scrollYProgress, [0, 1], [900, 0]) */
+  const y = useTransform(scrollYProgress, [0, 1], [-100, 40])
+
+  const scrollTitle = useScroll({
+    target: ref,
+    offset: ['start end', 'end end'],
+  })
+  const title = useTransform(scrollTitle.scrollYProgress, [0, 1], [-200, 0])
   return (
-    <div
+    <section
       ref={ref}
-      className='h-screen bg-white flex flex-col md:flex-row overflow-hidden'
+      className='h-screen bg-brand-purple flex flex-col items-center overflow-hidden'
     >
       <section className='w-1/2 flex items-center justify-center p-4 flex-1'>
-        <p className='text-2xl'>
-          Llevo desde junio de 2020 practicando y estudiando desarrollo web con
-          JavaScript de forma autodidacta.
-        </p>
-      </section>
-      <section className='w-1/2 items-center bg-cover bg-center flex justify-center bg-programming h-full'>
         <LazyAnimations>
-          <m.div className='h-fit w-full md:w-1/2'>
-            <figure className='h-[25vw] w-[25vw] relative'>
+          <m.div
+            style={{ y: title }}
+            className=' text-white mt-20 flex flex-col items-center gap-2'
+          >
+            <h1 className='text-5xl mx-8 font-bold'>Sobre mí</h1>
+            <div className='h-[2px] w-full bg-brand-violet' />
+            <p className='text-normal text-center'>
+              Llevo desde junio de 2020 practicando y estudiando desarrollo web
+              con JavaScript de forma autodidacta.
+            </p>
+          </m.div>
+        </LazyAnimations>
+      </section>
+      <section className='w-80 h-96 items-center flex justify-center'>
+        <figure className='relative h-full w-full'>
+          <Image
+            fill
+            alt='fairy'
+            src='/images/bg_programming.JPEG'
+            className='bg-cover bg-center'
+          />
+        </figure>
+        <LazyAnimations>
+          <m.div
+            style={{ y }}
+            className='h-fit absolute w-fit'
+          >
+            <figure className='h-40 w-40 relative'>
               <Image
                 fill
                 alt='fairy'
@@ -37,7 +62,7 @@ const AboutMe = () => {
           </m.div>
         </LazyAnimations>
       </section>
-    </div>
+    </section>
   )
 }
 

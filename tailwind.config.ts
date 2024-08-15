@@ -26,10 +26,10 @@ const config: Config = {
         brand: {
           blue: '#1e40af',
           yellow: '#ca8a04',
-          purple: '#6b21a8',
+          purple: '#110b2f',
           gray: '#4b5563',
           cd: '#2dd4bf',
-          int: '#3b0764',
+          violet: '#2E1D63',
           wby: '#db2777',
           uni: '#9d2342',
           plat: '#0ae98a',

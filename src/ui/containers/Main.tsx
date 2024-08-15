@@ -12,13 +12,26 @@ export function Main() {
     target: ref,
     offset: ['start end', 'end end'],
   })
-  const y = useTransform(scrollYProgress, [0, 1], [-200, 600])
+  const y = useTransform(scrollYProgress, [0, 1], [-200, 400])
   // const nameOpacity = useTransform(scrollYProgress, [0, 1], [0, 1])
   return (
     <div
       ref={ref}
-      className='bg-fairy-img flex justify-center h-[170vh] bg-cover bg-center'
+      className='bg-fairy-img flex flex-col items-center justify-center h-[170vh] bg-cover bg-center'
     >
+      <LazyAnimations>
+        <m.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ ease: 'easeOut', duration: 2 }}
+          className='font-bold text-brand-purple mt-20 flex flex-col items-center gap-2'
+        >
+          <h1 className='text-5xl mx-8'>Maided Hernandez</h1>
+          <div className='h-[2px] w-full bg-brand-purple' />
+          <h1 className='text-2xl'>Frontend Developer</h1>
+        </m.div>
+      </LazyAnimations>
+
       <LazyAnimations>
         <m.div
           style={{ y }}
@@ -29,6 +42,7 @@ export function Main() {
               fill
               alt='fairy'
               src='/images/fairy.PNG'
+              loading='lazy'
             />
           </figure>
         </m.div>

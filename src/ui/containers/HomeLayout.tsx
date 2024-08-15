@@ -12,9 +12,6 @@ const HomeLayout = () => {
       <Main />
       <AboutMe />
       <Stack />
-      <Projects />
-      <Education />
-      <ContactMe />
     </>
   )
 }
