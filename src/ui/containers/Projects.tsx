@@ -1,22 +1,12 @@
 'use client'
-import { useTransform, m, useScroll } from 'framer-motion'
+import { m } from 'framer-motion'
 import React, { useRef } from 'react'
 import { LazyAnimations } from 'components/LazyAnimations'
 import { Path } from '../components/Path'
 import Image from 'next/image'
-import { useGetWidth } from 'app/hooks'
 
 const Projects = () => {
   const ref = useRef(null)
-  const { elementWidth } = useGetWidth({})
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start center', 'end end'],
-  })
-  const viewport = elementWidth <= 768 ? -100 : -900
-  const y = useTransform(scrollYProgress, [0, 1], [500, 0])
-  const y2 = useTransform(scrollYProgress, [0, 1], [viewport || -900, 0])
-
   return (
     <div
       ref={ref}
