@@ -5,6 +5,7 @@ import { m, useScroll, useTransform } from 'framer-motion'
 import { NamesMobile } from '../components/NamesMobile' */
 import Image from 'next/image'
 import { LazyAnimations } from 'components/LazyAnimations'
+import Divider from '../components/Divider'
 
 const STACK = [
   {
@@ -62,56 +63,59 @@ export function Stack() {
     <>
       <section
         ref={ref}
-        className='items-start flex flex-col justify-center min-h-screen'
+        className='flex flex-col justify-around min-h-screen items-center'
       >
         <LazyAnimations>
           <m.div
-            className='h-48 flex flex-col items-center justify-center'
+            className='h-48 gap-2 flex flex-col items-center justify-center'
             style={{
               y,
             }}
           >
             <h1 className='text-5xl mx-8 font-bold text-white'>Stack</h1>
-            <ul className='flex gap-20'>
-              {STACK.map((item, index) => (
-                <li
-                  key={index}
-                  className='flex items-center flex-col gap-2'
-                >
-                  <figure className='h-10 w-10 relative'>
-                    <Image
-                      fill
-                      alt={item.name}
-                      src={item.src}
-                      loading='lazy'
-                    />
-                  </figure>
-                  <p>{item.name}</p>
-                </li>
-              ))}
+            <Divider />
+            <ul className='grid grid-cols-3 grid-rows-2 gap-6'>
+              {STACK.map((item, index) => {
+                return (
+                  <li
+                    key={index}
+                    className={`${STACK[index]?.name === 'JavaScript' && 'row-span-2 justify-center col-start-3 row-start-1 row-end-3 h-auto'} flex items-center rounded-2xl text-white bg-[#ffffff4d] box-content p-2 h-16 w-16 flex-col gap-2`}
+                  >
+                    <figure className='h-10 w-10 relative'>
+                      <Image
+                        fill
+                        alt={item.name}
+                        src={item.src}
+                        loading='lazy'
+                      />
+                    </figure>
+                    <p>{item.name}</p>
+                  </li>
+                )
+              })}
             </ul>
           </m.div>
         </LazyAnimations>
         <LazyAnimations>
           <m.div
-            className='h-48 w-full flex flex-col items-center justify-center'
+            className='h-48 gap-2 w-full flex flex-col items-center justify-center'
             style={{
               y: y2,
             }}
           >
             <h1 className='text-5xl mx-8 font-bold text-white'>Proyectos</h1>
-
-            <ul className='flex gap-20 w-fit'>
+            <Divider />
+            <ul className='flex gap-6 w-fit'>
               {PROJECTS.map((item) => (
                 <li
                   key={item.name}
-                  className='w-28 h-28'
+                  className='w-20 h-20 content-box'
                 >
                   <a
                     href={item.href}
-                    className='relative h-full flex items-center justify-center bg-black overflow-hidden '
+                    className='relative rounded-2xl h-full flex items-center justify-center bg-black overflow-hidden '
                   >
-                    <h2 className='absolute text-white z-10 font-bold text-xs'>
+                    <h2 className='absolute text-white z-10 font-bold text-xs p-2'>
                       {item.name}
                     </h2>
                     <Image

@@ -5,6 +5,7 @@ import React, { useRef } from 'react'
 import { LazyAnimations } from 'components/LazyAnimations'
 import { Stack } from './Stack'
 import { ContactMe } from './ContactMe'
+import Divider from '../components/Divider'
 
 const AboutMe = () => {
   const ref = useRef<HTMLDivElement>(null)
@@ -36,7 +37,7 @@ const AboutMe = () => {
                 className=' text-white flex flex-col items-center gap-2'
               >
                 <h1 className='text-5xl mx-8 font-bold'>Sobre mí</h1>
-                <div className='h-[2px] w-full bg-brand-violet' />
+                <Divider />
                 <p className='text-normal text-center'>
                   Llevo desde junio de 2020 practicando y estudiando desarrollo
                   web con JavaScript de forma autodidacta.
@@ -45,7 +46,7 @@ const AboutMe = () => {
             </LazyAnimations>
           </section>
           <section className='w-80 h-96 items-center flex justify-center'>
-            <figure className='relative h-full w-full'>
+            <figure className='relative overflow-hidden rounded-2xl h-full w-full'>
               <Image
                 fill
                 alt='fairy'
