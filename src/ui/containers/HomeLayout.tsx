@@ -1,11 +1,11 @@
 import React from 'react'
 import { AboutMe } from './AboutMe'
-import { Main } from './Main'
+import Header from '../components/Header'
 
 const HomeLayout = () => {
   return (
     <>
-      <Main />
+      <Header />
       <AboutMe />
     </>
   )
