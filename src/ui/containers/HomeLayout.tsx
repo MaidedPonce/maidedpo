@@ -1,12 +1,16 @@
 import React from 'react'
 import { AboutMe } from './AboutMe'
 import Header from '../components/Header'
+import { Projects } from '..'
 
 const HomeLayout = () => {
   return (
     <>
       <Header />
-      <AboutMe />
+      <section className='space-y-12'>
+        <AboutMe />
+        <Projects />
+      </section>
     </>
   )
 }

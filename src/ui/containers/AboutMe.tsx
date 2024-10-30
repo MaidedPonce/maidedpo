@@ -4,8 +4,8 @@ import Image from 'next/image'
 
 const AboutMe = () => {
   return (
-    <section className='bg-brand-purple text-white'>
-      <div>
+    <section className='min-h-screen text-white px-8 space-y-12'>
+      <div className='space-y-12'>
         <h1 className='text-7xl font-medium'>
           Hi,
           <br /> I am Maided
@@ -17,7 +17,7 @@ const AboutMe = () => {
           businesses bring their digital vision to life.
         </p>
       </div>
-      <div>
+      <div className='space-y-4'>
         <h2>Contactme</h2>
         <ul className='flex max-w-96 justify-between gap-6 items-center'>
           <li>
