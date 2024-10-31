@@ -1,7 +1,7 @@
 import React from 'react'
 import { AboutMe } from './AboutMe'
 import Header from '../components/Header'
-import { Projects } from '..'
+import { Projects, Stack } from '..'
 
 const HomeLayout = () => {
   return (
@@ -10,6 +10,7 @@ const HomeLayout = () => {
       <section className='space-y-12'>
         <AboutMe />
         <Projects />
+        <Stack />
       </section>
     </>
   )

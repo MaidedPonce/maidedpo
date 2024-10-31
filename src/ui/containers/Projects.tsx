@@ -8,12 +8,15 @@ import Image from 'next/image'
 const Projects = () => {
   const ref = useRef(null)
   return (
-    <section className='bg-brand-purple text-white px-8 space-y-12'>
+    <section className='bg-brand-purple flex justify-between items-center text-white px-8 space-y-12'>
       <div>
-        <h1 className='text-7xl font-medium'>Projects</h1>
+        <h1 className='text-7xl font-medium'>
+          Some
+          <br /> Projects
+        </h1>
       </div>
       <ul className='flex flex-row gap-16'>
-        <li className=''>
+        <li className='h-56 rounded-lg overflow-hidden w-56'>
           {/* <div className='absolute w-full h-full bg-black/20 z-10' /> */}
           <a
             href='https://maidedponce.github.io/todoMachine/'
@@ -30,7 +33,7 @@ const Projects = () => {
             />
           </a>
         </li>
-        <li className=''>
+        <li className='h-56 rounded-lg overflow-hidden w-56'>
           <a
             href='https://yeahofcourse.com/'
             className='h-full flex justify-center items-center relative  bg-black overflow-hidden'
@@ -46,7 +49,7 @@ const Projects = () => {
             />
           </a>
         </li>
-        <li className='h-full'>
+        <li className='h-56 rounded-lg overflow-hidden w-56'>
           <a
             href='https://maidedponce.github.io/rick-and-morty/'
             className='flex h-full justify-center items-center relative bg-black overflow-hidden'
