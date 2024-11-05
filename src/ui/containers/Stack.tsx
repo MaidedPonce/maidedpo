@@ -36,8 +36,8 @@ const STACK = [
 
 export function Stack() {
   return (
-    <section className='flex flex-col justify-around items-start gap-6'>
-      <h1 className='text-5xl font-bold text-white'>My stack</h1>
+    <section className='flex items-center px-8 space-y-12 flex-col justify-around items-start gap-6'>
+      <h1 className='text-7xl font-bold text-white'>My stack</h1>
       <ul className='flex justify-between gap-12'>
         {STACK.map((item, index) => {
           return (

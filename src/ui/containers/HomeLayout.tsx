@@ -1,7 +1,7 @@
 import React from 'react'
 import { AboutMe } from './AboutMe'
 import Header from '../components/Header'
-import { Projects, Stack } from '..'
+import { ContactMe, Projects, Stack } from '..'
 
 const HomeLayout = () => {
   return (
