@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const AboutMe = () => {
   return (
-    <section className='min-h-[80vh] flex items-center text-white px-8 space-y-12'>
+    <section className='min-h-[80vh] flex-col flex items-start justify-center text-white px-8 space-y-12'>
       <div className='space-y-12 max-w-[60%]'>
         <h1 className='text-7xl font-medium'>
           Hi,

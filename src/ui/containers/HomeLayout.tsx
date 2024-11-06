@@ -2,6 +2,7 @@ import React from 'react'
 import { AboutMe } from './AboutMe'
 import Header from '../components/Header'
 import { ContactMe, Projects, Stack } from '..'
+import { Education } from './Education'
 
 const HomeLayout = () => {
   return (
@@ -9,8 +10,9 @@ const HomeLayout = () => {
       <Header />
       <section className='space-y-12'>
         <AboutMe />
-        <Projects />
         <Stack />
+        <Projects />
+        <Education />
       </section>
     </>
   )

@@ -8,7 +8,10 @@ import Image from 'next/image'
 const Projects = () => {
   const ref = useRef(null)
   return (
-    <section className='bg-brand-purple flex justify-between items-center text-white px-8 space-y-12'>
+    <section
+      id='projects'
+      className='bg-brand-purple flex justify-between items-center text-white px-8 space-y-12'
+    >
       <div>
         <h1 className='text-7xl font-medium'>
           Some
