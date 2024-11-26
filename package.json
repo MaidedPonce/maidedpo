@@ -10,8 +10,9 @@
     "format:fix": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
-    "@tsparticles/engine": "^3.5.0",
+    "@tsparticles/engine": "3.7.1",
     "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "3.7.1",
     "framer-motion": "^11.1.9",
     "next": "14.2.3",
     "prettier": "^3.2.5",

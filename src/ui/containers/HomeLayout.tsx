@@ -1,8 +1,9 @@
 import React from 'react'
 import { AboutMe } from './AboutMe'
 import Header from '../components/Header'
-import { ContactMe, Projects, Stack } from '..'
+import { Projects, Stack } from '..'
 import { Education } from './Education'
+import ComponentParticles from './Particles'
 
 const HomeLayout = () => {
   return (
@@ -14,6 +15,7 @@ const HomeLayout = () => {
         <Projects />
         <Education />
       </section>
+      <ComponentParticles />
     </>
   )
 }
