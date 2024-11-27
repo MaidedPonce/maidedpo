@@ -18,7 +18,7 @@ const AboutMe = () => {
         </p>
       </div>
       <div className='space-y-4'>
-        <h2>Contactme</h2>
+        <h2 className='font-semibold'>Contactme</h2>
         <ul className='flex max-w-96 justify-between gap-6 items-center'>
           <li>
             <a href='https://github.com/MaidedPonce'>

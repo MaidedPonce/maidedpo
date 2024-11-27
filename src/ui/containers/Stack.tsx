@@ -1,11 +1,4 @@
-'use client'
-import { useRef } from 'react'
-import { m, useScroll, useTransform } from 'framer-motion'
-/* import { NamesDesktop } from '../components/NamesDesktop'
-import { NamesMobile } from '../components/NamesMobile' */
 import Image from 'next/image'
-import { LazyAnimations } from 'components/LazyAnimations'
-import Divider from '../components/Divider'
 
 const STACK = [
   {
@@ -38,7 +31,7 @@ export function Stack() {
   return (
     <section
       id='stack'
-      className='flex px-8 space-y-12 flex-col justify-around items-start gap-6'
+      className='flex px-8 space-y-12 items-center flex-col justify-around lg:items-start gap-6'
     >
       <h1 className='text-7xl font-bold text-white'>My stack</h1>
       <ul className='flex justify-between gap-12'>

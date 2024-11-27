@@ -1,16 +1,11 @@
-'use client'
-import { m } from 'framer-motion'
-import React, { useRef } from 'react'
-import { LazyAnimations } from 'components/LazyAnimations'
-import { Path } from '../components/Path'
+import React from 'react'
 import Image from 'next/image'
 
 const Projects = () => {
-  const ref = useRef(null)
   return (
     <section
       id='projects'
-      className='bg-brand-purple flex justify-between items-center text-white px-8 space-y-12'
+      className='bg-brand-purple flex-col lg:flex-row flex justify-between items-center text-white px-8 space-y-12'
     >
       <div>
         <h1 className='text-7xl font-medium'>
@@ -18,7 +13,7 @@ const Projects = () => {
           <br /> Projects
         </h1>
       </div>
-      <ul className='flex flex-row gap-16'>
+      <ul className='flex flex-col lg:flex-row gap-16'>
         <li className='h-56 rounded-lg overflow-hidden w-56'>
           {/* <div className='absolute w-full h-full bg-black/20 z-10' /> */}
           <a
