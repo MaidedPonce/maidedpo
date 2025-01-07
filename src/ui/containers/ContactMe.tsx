@@ -1,18 +1,7 @@
-'use client'
-import { useTransform, m, useScroll } from 'framer-motion'
-import React, { useRef } from 'react'
-import { LazyAnimations } from 'components/LazyAnimations'
+import React from 'react'
 import Image from 'next/image'
 
 const ContactMe = () => {
-  const ref = useRef<HTMLDivElement>(null)
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start center', 'end end'],
-  })
-  const y = useTransform(scrollYProgress, [0, 1], [-100, 40])
-
   return (
     <div className='space-y-4'>
       <h2>Contactme</h2>
