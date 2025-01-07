@@ -46,7 +46,7 @@ const ComponentParticles = () => {
             mode: 'repulse',
             parallax: { enable: false, force: 60, smooth: 10 },
           },
-          resize: true,
+          resize: { enable: true },
         },
         modes: {
           push: { quantity: 4 },
@@ -94,7 +94,6 @@ const ComponentParticles = () => {
     }),
     []
   )
-  console.log(init)
   if (init) {
     return (
       <Particles
