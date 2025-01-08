@@ -4,9 +4,9 @@ import Image from 'next/image'
 
 const AboutMe = () => {
   return (
-    <section className='min-h-[80vh] flex-col flex items-start justify-center text-white px-24 space-y-12'>
+    <section className='min-h-[80vh] flex-col flex items-start justify-center text-white px-8 lg:px-24 space-y-12'>
       <div className='space-y-12 max-w-[60%]'>
-        <h1 className='text-7xl font-medium'>
+        <h1 className='text-5xl lg:text-7xl font-medium'>
           Hi,
           <br /> I am Maided
           <br /> Frontend Developer

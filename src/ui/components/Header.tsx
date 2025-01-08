@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header>
       <nav className='p-8 bg-brand-purple w-full text-white'>
-        <ul className='flex justify-end items-center gap-16'>
+        <ul className='flex justify-between gap-4 lg:justify-end items-center lg:gap-16'>
           <li
             onClick={() => scrollToElement('projects')}
             className='hover:cursor-pointer'

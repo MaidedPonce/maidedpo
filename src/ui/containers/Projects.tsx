@@ -5,10 +5,10 @@ const Projects = () => {
   return (
     <section
       id='projects'
-      className='bg-brand-purple gap-4 flex-col lg:flex-row lg:justify-start lg:min-h-[70vh] flex justify-between items-center text-white px-24 space-y-12'
+      className='bg-brand-purple gap-4 flex-col lg:flex-row lg:justify-start lg:min-h-[70vh] flex justify-between items-center text-white px-8 lg:px-24 space-y-12'
     >
       <div>
-        <h1 className='text-7xl font-medium'>
+        <h1 className='text-5xl lg:text-7xl font-medium'>
           Some
           <br /> Projects
         </h1>
