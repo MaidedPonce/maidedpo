@@ -1,11 +1,13 @@
-'use client'
-import React from 'react'
+import { Animation } from '../components/Animation'
 
 const Education = () => {
   return (
-    <section
-      id='education'
-      className='bg-brand-purple flex-col h-[50vh] lg:justify-center lg:min-h-[90vh] flex justify-start items-center lg:items-end text-white px-24 space-y-12'
+    <Animation
+      attributes={{
+        id: 'education',
+        className:
+          'bg-brand-purple flex-col h-[50vh] lg:justify-center lg:min-h-[90vh] flex justify-start items-center lg:items-end text-white px-24 space-y-12',
+      }}
     >
       <h1 className='text-5xl lg:text-7xl font-medium'>Education</h1>
       <div className='flex items-start'>
@@ -17,7 +19,7 @@ const Education = () => {
           </h2>
         </div>
       </div>
-    </section>
+    </Animation>
   )
 }
 

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { Animation } from '../components/Animation'
 
 const STACK = [
   {
@@ -29,9 +30,12 @@ const STACK = [
 
 export function Stack() {
   return (
-    <section
-      id='stack'
-      className='flex lg:px-24 px-8 space-y-12 items-center flex-col justify-around lg:justify-center lg:min-h-[70vh] lg:items-end gap-6'
+    <Animation
+      attributes={{
+        id: 'stack',
+        className:
+          'flex lg:px-24 px-8 space-y-12 items-center flex-col justify-around lg:justify-center lg:min-h-[70vh] lg:items-end gap-6',
+      }}
     >
       <h1 className='text-5xl lg:text-7xl font-bold text-white'>My stack</h1>
       <ul className='flex-wrap justify-center flex lg:justify-between gap-12'>
@@ -54,6 +58,6 @@ export function Stack() {
           )
         })}
       </ul>
-    </section>
+    </Animation>
   )
 }

@@ -1,11 +1,14 @@
-import React from 'react'
 import Image from 'next/image'
+import { Animation } from '../components/Animation'
 
 const Projects = () => {
   return (
-    <section
-      id='projects'
-      className='bg-brand-purple gap-4 flex-col lg:flex-row lg:justify-start lg:min-h-[70vh] flex justify-between items-center text-white px-8 lg:px-24 space-y-12'
+    <Animation
+      attributes={{
+        id: 'projects',
+        className:
+          'bg-brand-purple gap-4 flex-col lg:flex-row lg:justify-start lg:min-h-[70vh] flex justify-between items-center text-white px-8 lg:px-24 space-y-12',
+      }}
     >
       <div>
         <h1 className='text-5xl lg:text-7xl font-medium'>
@@ -64,7 +67,7 @@ const Projects = () => {
           </a>
         </li>
       </ul>
-    </section>
+    </Animation>
   )
 }
 
