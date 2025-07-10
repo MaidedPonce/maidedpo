@@ -1,12 +1,11 @@
-import { Animation } from "components/Animation";
-import { SocialLinks } from "components/SocialLinks";
+import { Animation, SocialLinks } from 'components'
 
 const AboutMe = () => {
   return (
     <Animation
       attributes={{
         className:
-          "min-h-[80vh] flex flex-col items-start justify-center text-white px-8 lg:px-24 space-y-12",
+          'min-h-[80vh] flex flex-col items-start justify-center text-white px-8 lg:px-24 space-y-12',
       }}
     >
       <div className="space-y-12 max-w-[60%]">
@@ -26,7 +25,7 @@ const AboutMe = () => {
         <SocialLinks />
       </div>
     </Animation>
-  );
-};
+  )
+}
 
-export { AboutMe };
+export { AboutMe }

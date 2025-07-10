@@ -1,14 +1,13 @@
-import { Animation } from "components/Animation";
-import { ProjectCard } from "components/ProjectCard";
-import { PROJECTS } from "constants/index";
+import { Animation, ProjectCard } from 'components'
+import { PROJECTS } from 'constants/index'
 
 const Projects = () => {
   return (
     <Animation
       attributes={{
-        id: "projects",
+        id: 'projects',
         className:
-          "bg-brand-purple gap-4 flex-col lg:flex-row lg:justify-start lg:min-h-[70vh] flex justify-between items-center text-white px-8 lg:px-24 space-y-12",
+          'bg-brand-purple gap-4 flex-col lg:flex-row lg:justify-start lg:min-h-[70vh] flex justify-between items-center text-white px-8 lg:px-24 space-y-12',
       }}
     >
       <div>
@@ -23,7 +22,7 @@ const Projects = () => {
         ))}
       </ul>
     </Animation>
-  );
-};
+  )
+}
 
-export { Projects };
+export { Projects }

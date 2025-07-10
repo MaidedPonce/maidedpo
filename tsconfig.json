@@ -22,6 +22,7 @@
       "app/*": ["./src/*"],
       "public/*": ["/public/*"],
       "components/*": ["src/ui/components/*"],
+      "components": ["src/ui/components"],
       "containers/*": ["src/ui/containers/*"],
       "hooks/*": ["src/hooks/*"],
       "constants/*": ["src/constants/*"]

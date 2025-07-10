@@ -1,12 +1,12 @@
-import React from "react";
-import { LazyMotion, domAnimation } from "framer-motion";
+import React from 'react'
+import { LazyMotion, domAnimation } from 'framer-motion'
 
 interface LazyAnimationsProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 const LazyAnimations = ({ children }: LazyAnimationsProps) => {
-  return <LazyMotion features={domAnimation}>{children}</LazyMotion>;
-};
+  return <LazyMotion features={domAnimation}>{children}</LazyMotion>
+}
 
-export { LazyAnimations };
+export { LazyAnimations }

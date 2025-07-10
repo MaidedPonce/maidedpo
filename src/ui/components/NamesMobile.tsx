@@ -1,11 +1,11 @@
-"use client";
-import { useRef } from "react";
-import { motion, useTransform } from "framer-motion";
+'use client'
+import { useRef } from 'react'
+import { motion, useTransform } from 'framer-motion'
 
 export function NamesMobile({ scroll, containerHeight }: any) {
-  const nameRef = useRef<HTMLDivElement>(null);
+  const nameRef = useRef<HTMLDivElement>(null)
 
-  const y = useTransform(scroll, [0, 1], [0, containerHeight / 2]);
+  const y = useTransform(scroll, [0, 1], [0, containerHeight / 2])
   return (
     <>
       <motion.div
@@ -25,5 +25,5 @@ export function NamesMobile({ scroll, containerHeight }: any) {
         </p>
       </motion.div>
     </>
-  );
+  )
 }

@@ -1,8 +1,8 @@
-import Image from "next/image";
-import { Project } from "constants/index";
+import Image from 'next/image'
+import { Project } from 'constants/index'
 
 interface ProjectCardProps {
-  project: Project;
+  project: Project
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
@@ -23,5 +23,5 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         />
       </a>
     </li>
-  );
-};
+  )
+}

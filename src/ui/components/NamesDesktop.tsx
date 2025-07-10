@@ -1,19 +1,15 @@
-"use client";
-import { useRef } from "react";
-import { m, useTransform } from "framer-motion";
-import { useGetWidth } from "app/hooks";
-import { LazyAnimations } from "./LazyAnimations";
+'use client'
+import { useRef } from 'react'
+import { m, useTransform } from 'framer-motion'
+import { useGetWidth } from 'app/hooks'
+import { LazyAnimations } from './LazyAnimations'
 
 export function NamesDesktop({ elementWidth: mainElement, scroll }: any) {
-  const nameRef = useRef<HTMLDivElement>(null);
-  const { elementWidth } = useGetWidth({ ref: nameRef });
-  const x = useTransform(
-    scroll,
-    [0, 1],
-    [0, mainElement - elementWidth * 1.15],
-  );
-  const name = useTransform(scroll, [0, 1], [900, 0]);
-  const nameOpacity = useTransform(scroll, [0, 1], [0, 1]);
+  const nameRef = useRef<HTMLDivElement>(null)
+  const { elementWidth } = useGetWidth({ ref: nameRef })
+  const x = useTransform(scroll, [0, 1], [0, mainElement - elementWidth * 1.15])
+  const name = useTransform(scroll, [0, 1], [900, 0])
+  const nameOpacity = useTransform(scroll, [0, 1], [0, 1])
 
   return (
     <LazyAnimations>
@@ -22,7 +18,7 @@ export function NamesDesktop({ elementWidth: mainElement, scroll }: any) {
         className="text-9xl sticky top-[20vh] text-white w-fit"
         style={{
           x,
-          transform: "translateX(0px) translateZ(0px)",
+          transform: 'translateX(0px) translateZ(0px)',
         }}
       >
         <p>
@@ -40,5 +36,5 @@ export function NamesDesktop({ elementWidth: mainElement, scroll }: any) {
         <p>Frontend Developer</p>
       </m.div>
     </LazyAnimations>
-  );
+  )
 }

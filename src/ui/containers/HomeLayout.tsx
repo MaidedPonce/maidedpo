@@ -1,9 +1,9 @@
-import React from "react";
-import { AboutMe } from "./AboutMe";
-import Header from "components/Header";
-import { Stack, Projects } from "..";
-import { Education } from "./Education";
-import ComponentParticles from "./Particles";
+import React from 'react'
+import { AboutMe } from './AboutMe'
+import { Header } from 'components'
+import { Stack, Projects } from '..'
+import { Education } from './Education'
+import ComponentParticles from './Particles'
 
 const HomeLayout = () => {
   return (
@@ -17,7 +17,7 @@ const HomeLayout = () => {
       </section>
       <ComponentParticles />
     </>
-  );
-};
+  )
+}
 
-export { HomeLayout };
+export { HomeLayout }

@@ -1,1 +1,1 @@
-export * from "./useGetWidth";
+export * from './useGetWidth'

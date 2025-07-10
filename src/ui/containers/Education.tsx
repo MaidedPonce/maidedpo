@@ -1,12 +1,12 @@
-import { Animation } from "components/Animation";
+import { Animation } from 'components'
 
 const Education = () => {
   return (
     <Animation
       attributes={{
-        id: "education",
+        id: 'education',
         className:
-          "bg-brand-purple flex-col h-[50vh] lg:justify-center lg:min-h-[90vh] flex justify-start items-center lg:items-end text-white px-24 space-y-12",
+          'bg-brand-purple flex-col h-[50vh] lg:justify-center lg:min-h-[90vh] flex justify-start items-center lg:items-end text-white px-24 space-y-12',
       }}
     >
       <h1 className="text-5xl lg:text-7xl font-medium">Education</h1>
@@ -20,7 +20,7 @@ const Education = () => {
         </div>
       </div>
     </Animation>
-  );
-};
+  )
+}
 
-export { Education };
+export { Education }

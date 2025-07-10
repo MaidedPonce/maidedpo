@@ -1,14 +1,14 @@
-import Image from "next/image";
-import { Animation } from "components/Animation";
-import { STACK_TECHNOLOGIES } from "constants/index";
+import Image from 'next/image'
+import { Animation } from 'components'
+import { STACK_TECHNOLOGIES } from 'constants/index'
 
 export function Stack() {
   return (
     <Animation
       attributes={{
-        id: "stack",
+        id: 'stack',
         className:
-          "flex lg:px-24 px-8 space-y-12 items-center flex-col justify-around lg:justify-center lg:min-h-[70vh] lg:items-end gap-6",
+          'flex lg:px-24 px-8 space-y-12 items-center flex-col justify-around lg:justify-center lg:min-h-[70vh] lg:items-end gap-6',
       }}
     >
       <h1 className="text-5xl lg:text-7xl font-bold text-white">My stack</h1>
@@ -21,9 +21,9 @@ export function Stack() {
               </figure>
               <p className="text-white text-center">{item.name}</p>
             </li>
-          );
+          )
         })}
       </ul>
     </Animation>
-  );
+  )
 }

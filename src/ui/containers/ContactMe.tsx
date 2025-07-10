@@ -1,5 +1,5 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react'
+import Image from 'next/image'
 
 const ContactMe = () => {
   return (
@@ -38,7 +38,7 @@ const ContactMe = () => {
         </li>
       </ul>
     </div>
-  );
-};
+  )
+}
 
-export { ContactMe };
+export { ContactMe }

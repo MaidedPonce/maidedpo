@@ -1,11 +1,11 @@
-import Image from "next/image";
-import { SOCIAL_LINKS } from "constants/index";
+import Image from 'next/image'
+import { SOCIAL_LINKS } from 'constants/index'
 
 interface SocialLinksProps {
-  className?: string;
+  className?: string
 }
 
-export const SocialLinks: React.FC<SocialLinksProps> = ({ className = "" }) => {
+export const SocialLinks: React.FC<SocialLinksProps> = ({ className = '' }) => {
   return (
     <ul
       className={`flex max-w-96 justify-between gap-6 items-center ${className}`}
@@ -23,5 +23,5 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({ className = "" }) => {
         </li>
       ))}
     </ul>
-  );
-};
+  )
+}
