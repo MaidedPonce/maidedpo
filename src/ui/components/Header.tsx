@@ -10,23 +10,23 @@ const Header = () => {
   }
   return (
     <header>
-      <nav className='p-8 bg-brand-purple w-full text-white'>
-        <ul className='flex justify-between gap-4 lg:justify-end items-center lg:gap-16'>
+      <nav className="p-8 bg-brand-purple w-full text-white">
+        <ul className="flex justify-between gap-4 lg:justify-end items-center lg:gap-16">
           <li
             onClick={() => scrollToElement('projects')}
-            className='hover:cursor-pointer'
+            className="hover:cursor-pointer"
           >
             Projects
           </li>
           <li
             onClick={() => scrollToElement('stack')}
-            className='hover:cursor-pointer'
+            className="hover:cursor-pointer"
           >
             Stack
           </li>
           <li
             onClick={() => scrollToElement('education')}
-            className='hover:cursor-pointer'
+            className="hover:cursor-pointer"
           >
             Education
           </li>
@@ -37,3 +37,4 @@ const Header = () => {
 }
 
 export default Header
+export { Header }

@@ -1,5 +1,5 @@
 'use client'
-import { LazyAnimations } from '../components/LazyAnimations'
+import { LazyAnimations } from './LazyAnimations'
 import { HTMLMotionProps, m, useScroll, useTransform } from 'framer-motion'
 import { ReactNode, useRef } from 'react'
 

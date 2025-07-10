@@ -10,7 +10,7 @@ export function NamesMobile({ scroll, containerHeight }: any) {
     <>
       <motion.div
         ref={nameRef}
-        className='text-4xl lg:text-8xl h-full flex items-center flex-col gap-8 text-center sticky top-[20vh] text-white w-full lg:w-fit'
+        className="text-4xl lg:text-8xl h-full flex items-center flex-col gap-8 text-center sticky top-[20vh] text-white w-full lg:w-fit"
         style={{
           y,
         }}
@@ -20,7 +20,7 @@ export function NamesMobile({ scroll, containerHeight }: any) {
           <br />
           Hernandez
         </p>
-        <p className='text-2xl lg:text-4xl text-white w-fit mb-28'>
+        <p className="text-2xl lg:text-4xl text-white w-fit mb-28">
           Frontend Developer
         </p>
       </motion.div>

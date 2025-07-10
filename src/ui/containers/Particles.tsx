@@ -97,7 +97,7 @@ const ComponentParticles = () => {
   if (init) {
     return (
       <Particles
-        id='tsparticles'
+        id="tsparticles"
         particlesLoaded={particlesLoaded}
         options={options}
       />

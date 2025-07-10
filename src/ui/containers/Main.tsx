@@ -17,33 +17,25 @@ export function Main() {
   return (
     <div
       ref={ref}
-      className='bg-fairy-img flex flex-col items-center justify-center h-[170vh] bg-cover bg-center'
+      className="bg-fairy-img flex flex-col items-center justify-center h-[170vh] bg-cover bg-center"
     >
       <LazyAnimations>
         <m.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ ease: 'easeOut', duration: 2 }}
-          className='font-bold text-brand-purple mt-20 flex flex-col items-center gap-2'
+          className="font-bold text-brand-purple mt-20 flex flex-col items-center gap-2"
         >
-          <h1 className='text-5xl mx-8'>Maided Hernandez</h1>
-          <div className='h-[2px] w-full bg-brand-purple' />
-          <h1 className='text-2xl'>Frontend Developer</h1>
+          <h1 className="text-5xl mx-8">Maided Hernandez</h1>
+          <div className="h-[2px] w-full bg-brand-purple" />
+          <h1 className="text-2xl">Frontend Developer</h1>
         </m.div>
       </LazyAnimations>
 
       <LazyAnimations>
-        <m.div
-          style={{ y }}
-          className='h-full'
-        >
-          <figure className='h-[25vw] w-[25vw] relative'>
-            <Image
-              fill
-              alt='fairy'
-              src='/images/fairy.PNG'
-              loading='lazy'
-            />
+        <m.div style={{ y }} className="h-full">
+          <figure className="h-[25vw] w-[25vw] relative">
+            <Image fill alt="fairy" src="/images/fairy.PNG" loading="lazy" />
           </figure>
         </m.div>
       </LazyAnimations>

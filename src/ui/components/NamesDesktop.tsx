@@ -15,7 +15,7 @@ export function NamesDesktop({ elementWidth: mainElement, scroll }: any) {
     <LazyAnimations>
       <m.div
         ref={nameRef}
-        className='text-9xl sticky top-[20vh] text-white w-fit'
+        className="text-9xl sticky top-[20vh] text-white w-fit"
         style={{
           x,
           transform: 'translateX(0px) translateZ(0px)',
@@ -31,7 +31,7 @@ export function NamesDesktop({ elementWidth: mainElement, scroll }: any) {
           opacity: nameOpacity,
           y: name,
         }}
-        className='text-5xl sticky top-48 text-white w-fit mb-28'
+        className="text-5xl sticky top-48 text-white w-fit mb-28"
       >
         <p>Frontend Developer</p>
       </m.div>
