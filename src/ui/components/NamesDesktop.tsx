@@ -1,10 +1,15 @@
 'use client'
 import { useRef } from 'react'
-import { m, useTransform } from 'framer-motion'
+import { m, useTransform, MotionValue } from 'framer-motion'
 import { useGetWidth } from 'app/hooks'
 import { LazyAnimations } from './LazyAnimations'
 
-export function NamesDesktop({ elementWidth: mainElement, scroll }: any) {
+interface NamesDesktopProps {
+  elementWidth: number
+  scroll: MotionValue<number>
+}
+
+export function NamesDesktop({ elementWidth: mainElement, scroll }: NamesDesktopProps) {
   const nameRef = useRef<HTMLDivElement>(null)
   const { elementWidth } = useGetWidth({ ref: nameRef })
   const x = useTransform(scroll, [0, 1], [0, mainElement - elementWidth * 1.15])

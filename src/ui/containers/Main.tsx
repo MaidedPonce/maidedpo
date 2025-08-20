@@ -40,9 +40,11 @@ export function Main() {
           <figure className='h-[25vw] w-[25vw] relative'>
             <Image
               fill
-              alt='fairy'
+              alt='Ilustración de un hada mágica representando la creatividad y magia en el desarrollo frontend'
               src='/images/fairy.PNG'
               loading='lazy'
+              sizes='25vw'
+              priority={false}
             />
           </figure>
         </m.div>

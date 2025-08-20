@@ -1,6 +1,34 @@
 import Image from 'next/image'
 import { Animation } from '../components/Animation'
 
+interface Project {
+  title: string
+  url: string
+  imageSrc: string
+  imageAlt: string
+}
+
+const PROJECTS: Project[] = [
+  {
+    title: 'TODOMACHINE',
+    url: 'https://maidedponce.github.io/todoMachine/',
+    imageSrc: '/images/todoMachine.png',
+    imageAlt: 'Captura de pantalla de la aplicación TODOMACHINE - Una aplicación de gestión de tareas',
+  },
+  {
+    title: 'Yes Of Course',
+    url: 'https://yeahofcourse.com/',
+    imageSrc: '/images/yoc.png',
+    imageAlt: 'Captura de pantalla del sitio web Yes Of Course',
+  },
+  {
+    title: 'Rick and Morty',
+    url: 'https://maidedponce.github.io/rick-and-morty/',
+    imageSrc: '/images/rick.png',
+    imageAlt: 'Captura de pantalla de la aplicación Rick and Morty - Explorador de personajes',
+  },
+]
+
 const Projects = () => {
   return (
     <Animation
@@ -12,60 +40,33 @@ const Projects = () => {
     >
       <div>
         <h1 className='text-5xl lg:text-7xl font-medium'>
-          Some
-          <br /> Projects
+          Algunos
+          <br /> Proyectos
         </h1>
       </div>
       <ul className='flex flex-col lg:flex-row gap-16'>
-        <li className='h-56 rounded-lg overflow-hidden w-56'>
-          {/* <div className='absolute w-full h-full bg-black/20 z-10' /> */}
-          <a
-            href='https://maidedponce.github.io/todoMachine/'
-            className='relative h-full flex items-center justify-center bg-black overflow-hidden '
-          >
-            <h2 className='absolute text-white z-10 font-bold text-xs'>
-              TODOMACHINE
-            </h2>
-            <Image
-              fill
-              className='transition-transform object-cover opacity-80 duration-300 ease-in-out hover:cursor-pointer hover:scale-125'
-              alt='Screenshot de TODOMACHINE'
-              src='/images/todoMachine.png'
-            />
-          </a>
-        </li>
-        <li className='h-56 rounded-lg overflow-hidden w-56'>
-          <a
-            href='https://yeahofcourse.com/'
-            className='h-full flex justify-center items-center relative  bg-black overflow-hidden'
-          >
-            <h2 className='absolute text-white z-10 font-bold text-xs'>
-              Yes Of Course
-            </h2>
-            <Image
-              fill
-              className='transition-transform object-cover opacity-80 duration-300 ease-in-out hover:cursor-pointer hover:scale-125'
-              alt='Screenshot de Yes Of Course'
-              src='/images/yoc.png'
-            />
-          </a>
-        </li>
-        <li className='h-56 rounded-lg overflow-hidden w-56'>
-          <a
-            href='https://maidedponce.github.io/rick-and-morty/'
-            className='flex h-full justify-center items-center relative bg-black overflow-hidden'
-          >
-            <h2 className='absolute text-white z-10 font-bold text-xs'>
-              Rick and Morty
-            </h2>
-            <Image
-              fill
-              className='transition-transform object-cover opacity-80 duration-300 ease-in-out hover:cursor-pointer hover:scale-125'
-              alt='Screenshot de Yes Of Course'
-              src='/images/rick.png'
-            />
-          </a>
-        </li>
+        {PROJECTS.map((project, index) => (
+          <li key={index} className='h-56 rounded-lg overflow-hidden w-56'>
+            <a
+              href={project.url}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='relative h-full flex items-center justify-center bg-black overflow-hidden focus:outline-none focus:ring-2 focus:ring-brand-yellow'
+              aria-label={`Ver proyecto ${project.title}`}
+            >
+              <h2 className='absolute text-white z-10 font-bold text-xs text-center'>
+                {project.title}
+              </h2>
+              <Image
+                fill
+                className='transition-transform object-cover opacity-80 duration-300 ease-in-out hover:cursor-pointer hover:scale-125'
+                alt={project.imageAlt}
+                src={project.imageSrc}
+                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+              />
+            </a>
+          </li>
+        ))}
       </ul>
     </Animation>
   )
